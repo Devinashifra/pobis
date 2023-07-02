@@ -20,7 +20,6 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama Pemesan</th>
-                    <th scope="col">No. Identitas</th>
                     <th scope="col">No. HP</th>
                     <th scope="col">Kelas Penumpang</th>
                     <th scope="col">Tgn Keberangkatan</th>

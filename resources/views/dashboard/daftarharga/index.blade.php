@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Menu</h1>
+        <h1 class="h2">Daftar Harga</h1>
     </div>
 
     
@@ -21,7 +21,6 @@
                     <th scope="col">No</th>
                     <th scope="col">Menu</th>
                     <th scope="col">Harga</th>
-                    <th scope="col">Image</th>
                     <th scope="col">Aksi</th>
                 </tr>
             </thead>
@@ -30,15 +29,11 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $men->nama_menu }}</td>
-                        <td>{!! $men->harga !!}</td>
-                        <td>{!! $men->image !!}
-                            
-                        </td>
-
+                        <td>{!! $men->harga !!}</td>                          
                         <td>
-                            <a href="/dashboard/materi/{{ $men->slug }}" class="badge bg-info"><span
+                            <a href="/dashboard/daftarharga/{{ $men->slug }}" class="badge bg-info"><span
                                     data-feather="eye"></span></a>
-                            <a href="/dashboard/materi/{{ $men->slug }}/edit" class="badge bg-warning"><span
+                            <a href="/dashboard/daftarharga/{{ $men->slug }}/edit" class="badge bg-warning"><span
                                     data-feather="edit"></span></a>
                             <form action="/dashboard/kategoribus/{{ $men->slug }}" method="post" class="d-inline">
                                 @method('delete')

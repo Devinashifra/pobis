@@ -16,7 +16,7 @@ class DashboardKategoriController extends Controller
     public function index()
     {
         return view('dashboard.kategoribus.index', [
-            "bus" => kategori::all()
+            "menu" => kategori::all()
         ]);
     }
 
@@ -28,7 +28,7 @@ class DashboardKategoriController extends Controller
     public function create()
     {
         return view('dashboard.kategoribus.create', [
-            "bus" => kategori::all()
+            "menu" => kategori::all()
         ]);
     }
 
@@ -41,20 +41,19 @@ class DashboardKategoriController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'jenis_bis' => 'required|max:255',
-            'slug' => 'required|unique:kategoris',
-            'deskripsi' => 'required',
+            'nama_menu' => 'required|max:255',
+            'harga' => 'required',
             'image' => 'image|file|max:1024',
 
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('kategoribus-images');
+            $validatedData['image'] = $request->file('image')->store('kategori-images');
         }
 
         kategori::create($validatedData);
 
-        return redirect('/dashboard/kategoribus')->with('success', 'Model bus berhasil ditambahkan!');
+        return redirect('/dashboard/kategoribus')->with('success', 'Menu berhasil ditambahkan!');
     }
 
     /**
@@ -66,19 +65,19 @@ class DashboardKategoriController extends Controller
     public function show(kategori $kategori)
     {
         return view('dashboard.kategoribus.show', [
-            "bus" => kategori::all()
+            "menu" => kategori::all()
         ]);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\kategori  $kategori
      * @return \Illuminate\Http\Response
      */
-    public function edit(kategori $kategori)
+    public function edit($id)
     {
-        //
+        $kategori = \App\Models\Kategori::find($id);
+        return view('dashboard.kategoribus.index',['kategori' => $kategori]);
     }
 
     /**
@@ -88,6 +87,7 @@ class DashboardKategoriController extends Controller
      * @param  \App\Models\kategori  $kategori
      * @return \Illuminate\Http\Response
      */
+    
     public function update(Request $request, kategori $kategori)
     {
         //
@@ -105,6 +105,6 @@ class DashboardKategoriController extends Controller
             Storage::delete($kategori->image);
         }
         kategori::destroy($kategori->id);
-        return redirect('/dashboard/kategoribus')->with('success', 'kategori berhasil dihapus!');
+        return redirect('/dashboard/kategoribus')->with('success', 'Menu berhasil dihapus!');
     }
 }

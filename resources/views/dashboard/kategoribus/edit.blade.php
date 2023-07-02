@@ -18,16 +18,7 @@
                     </div>
                 @enderror
             </div>
-            <div class="mb-3">
-                <label for="slug" class="form-label">Slug</label>
-                <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"
-                    required value="{{ old('slug', $post->slug) }}">
-                @error('slug')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                @enderror
-            </div>
+            
             <div class="mb-3">
                 <label for="kategori_id" class="form-label" style="display: none">Kategori Materi</label>
                 <select class="form-select" style="display: none" id="kategori_id" name="kategori_id">
@@ -49,7 +40,7 @@
                 <trix-editor input="body"></trix-editor>
             </div>
             <div class="mb-3">
-                <label for="formFile" class="form-label">Gambar Materi</label>
+                <label for="formFile" class="form-label">Gambar</label>
                 <input type="hidden" name="oldImage" value="{{ $post->image }}">
                 @if($post->image)
                 <img src="{{ asset('storage/' . $post->image) }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">

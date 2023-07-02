@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Victoria Bus | Dashboard</title>
+    <title>Olive Fried Chicken | Dashboard</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -31,7 +31,7 @@
 <body>
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow mb-3">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-5" href="/"><b>VICTORIA BUS</b></a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-5" href="/"><b>OLIVE</b></a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle pt-3" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false"><span data-feather="user"></span>
-                        {{ auth()->user()->name }}</a>
+                        
                     <ul class="dropdown-menu dropdown-menu-macos mx-0 border-0 shadow mt-3">
                         <li><a class="dropdown-item" href="/"> Home <span data-feather="home"></span></a></li>
                         <form action="/logout" method="post">
@@ -75,7 +75,7 @@
                             <a class="nav-link {{ Request::is('dashboard/kategoribus*') ? 'active' : '' }}"
                                 href="/dashboard/kategoribus">
                                 <span data-feather="grid"></span>
-                                Model Bus
+                                Menu
                             </a>
                         </li>
                         <li class="nav-item">

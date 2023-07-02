@@ -2,12 +2,12 @@
 
 @section('layout')
 
-    <body class="bg-light">
+    <body class="bg-light" style="background-image: url(./img/background.jpeg)">
         <div class="container my-5">
             <main>
                 {{-- heading --}}
                 <div class="py-5 text-center">
-                    <h2 class="display-4 fw-normal">Daftar Harga Tiket</h2>
+                    <h2 class="display-4 fw-normal">Daftar Harga Menu</h2>
                 </div>
 
                 {{-- Tabel daftar harga --}}
@@ -20,7 +20,7 @@
                                         <thead>
                                             <tr class="table-light">
                                                 <th scope="col">No</th>
-                                                <th scope="col">Model Bus</th>
+                                                <th scope="col">Menu</th>
                                                 <th scope="col">Harga</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
@@ -29,7 +29,7 @@
                                             @foreach ($harga as $harga)
                                                 <tr>
                                                     <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $harga->kelas_bus }}</td>
+                                                    <td>{{ $harga->menu }}</td>
                                                     <td>Rp. {{ $harga->harga }}</td>
                                                     <td><a class="btn btn-primary" href="/pesanan">Pesan</a>
                                                     </td>

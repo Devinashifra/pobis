@@ -18,15 +18,20 @@
     <link href="/css/product.css" rel="stylesheet">
     <link href="/css/form-validation.css" rel="stylesheet">
 
-    <title>Victoria Bus | {{ $title }}</title>
+    <title>Olive Fried Chicken | {{ $title }}</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-gradient">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-gradient" >
+        <style type="text/css">
+            .navbar-expand-md {
+        background-color: #D2001A;
+        }
+        </style>
             <div class="container">
                 <a class="navbar-brand mb-0" href="/">
-                    <strong>VICTORIA BUS |</strong>
+                    <strong>OLIVE </strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,8 +43,7 @@
                             <a class="nav-link {{ $active === 'home' ? 'active' : '' }}" href="/">Home</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link {{ $active === 'Model Bus' ? 'active' : '' }}" href="/kategoribus">Model
-                                Bus</a>
+                            <a class="nav-link {{ $active === 'Model Bus' ? 'active' : '' }}" href="/kategoribus">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {{ $active === 'Daftar Harga' ? 'active' : '' }}"
@@ -56,7 +60,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        Wellcome, {{ auth()->user()->name }}
+                                        Welcome, {{ auth()->user()->name }}
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-macos mx-0 border-0 shadow mx-2 mt-2"
                                         style="width: 100px;">
@@ -98,12 +102,12 @@
             integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
         </script>
     </header>
-    <footer class="footer mt-auto py-5 bg-dark">
+    <footer class="footer mt-auto py-5" style="background-color: #D2001A;">
         <div class="container">
-            <h5 class="text-light">PT. Victoria Transfort</h5>
-            <p class="text-light">Alamat: JL. Mayor Sujadi 23A, Jepun Tulungagung, Jawa Timur</p>
-            <p class="text-light">No Tlp: (0355) 321620, 321624, 327575</p>
-            <p class="text-light">Email: MyBus@gmail.com</p>
+            <h5 class="text-light">Olive Fried Chicken</h5>
+            <p class="text-light">Alamat: Jl. Taman Siswa No.712, Sorosutan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta </p>
+            <p class="text-light">No Tlp:  085103011788</p>
+            <p class="text-light">Email: olive@gmail.com</p>
         </div>
     </footer>
 

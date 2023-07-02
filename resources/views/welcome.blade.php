@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Olive Fried Chicken</title>
         {{-- Program ini ditulis oleh Rama Soni Ravictor
             Tanggal 23 agustus 2022 --}}
 

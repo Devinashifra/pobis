@@ -16,13 +16,11 @@ return new class extends Migration
         Schema::create('pesanans', function (Blueprint $table) {
             $table->id();
             $table->string('Nama_Pemesan');
-            $table->bigInteger('No_Identitas')->length(16);
             $table->string('No_HP', "15");
-            $table->string('Kelas_Penumpang');
-            $table->date('Tgl_Keberangkatan');
-            $table->integer('Jlh_Penumpang');
-            $table->integer('Jlh_Lansia');
-            $table->decimal('Harga_Tiket');
+            $table->string('Menu');
+            $table->date('Tgl_Pemesanan');
+            $table->integer('Jlh_Beli');
+            $table->decimal('Harga');
             $table->decimal('Total_Bayar');
             $table->timestamps();
         });

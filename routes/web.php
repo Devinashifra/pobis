@@ -34,8 +34,8 @@ Route::get('/', function () {
 //menampilkan halaman kategori bus
 Route::get('/kategoribus', function () {
     return view('kategoribus', [
-        "title" => "Model Bus",
-        "active" => 'Model Bus',
+        "title" => "menu",
+        "active" => 'menu',
         "bus" => kategori::all()
     ]);
 });
@@ -43,8 +43,8 @@ Route::get('/kategoribus', function () {
 //menampilkan halaman bus
 Route::get('/kategoribus/{bus:slug}', function (kategori $bus) {
     return view('bus', [
-        'title' => $bus->jenis_bis,
-        "active" => 'Model Bus',
+        'title' => $bus->nama_menu,
+        "active" => 'menu',
         'bus' => $bus,
 
     ]);
@@ -90,6 +90,7 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('/dashboard/kategoribus', DashboardKategoriController::class);
-
+Route::get('/kategoribus/{id}/edit',[DashboarKategoriController::class,'edit']);
+Route::get('/kategori/delete/{id}',[DashboardKategoriController::class,'delete']);
 
 Route::resource('/dashboard/pesanan', DashboardPesananController::class);

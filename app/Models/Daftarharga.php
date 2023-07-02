@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Daftarharga extends Model
 {
     use HasFactory;
-    protected $fillable = ['kelas_bus','harga'];
+    protected $fillable = ['menu','harga'];
 
     // menghubungkan ke model psanan
     public function Pesanan()

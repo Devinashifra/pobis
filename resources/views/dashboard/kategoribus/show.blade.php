@@ -15,7 +15,7 @@
                         <span data-feather="trash-2"></span> Delete </button>
                 </form>
 
-                <h1 class="my-5">{{ $bus->jenis_bis }}</h1>
+                <h1 class="my-5">{{ $bus-kategoribus }}</h1>
                 @if ($bus->image)
                     <img src="{{ asset('storage/' . $bus->image) }}" class="card-img-top" alt="gambar">
                 @else

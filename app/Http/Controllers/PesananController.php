@@ -48,13 +48,7 @@ class PesananController extends Controller
     {
         $validatedData = $request->validate([
             'Nama_Pemesan' => 'required',
-            'No_Identitas' => 'required',
-            'No_HP' => 'required',
-            'Kelas_Penumpang' => 'required',
-            'Tgl_Keberangkatan' => 'required',
-            'Jlh_Penumpang' => 'required',
-            'Jlh_Lansia' => 'required',
-            'Harga_Tiket' => 'required',
+            'Harga' => 'required',
             'Total_Bayar' => 'required',
 
         ]);
@@ -63,7 +57,7 @@ class PesananController extends Controller
 
         Pesanan::create($validatedData);
 
-        return redirect('/pesanan')->with('success', 'Tiket berhasil di pesan!');
+        return redirect('/pesanan')->with('success', 'Menu berhasil di pesan!');
     }
 
     /**

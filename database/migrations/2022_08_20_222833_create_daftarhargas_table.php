@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('daftarhargas', function (Blueprint $table) {
             $table->id();
-            $table->string('kelas_bus');
+            $table->string('menu');
             $table->decimal('harga');
             $table->timestamps();
         });

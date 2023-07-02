@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class kategori extends Model
 {
     use HasFactory;
-    protected $fillable = ['jenis_bis','slug', 'deskripsi', 'image'];
+    protected $fillable = ['nama_menu','harga', 'image'];
 }

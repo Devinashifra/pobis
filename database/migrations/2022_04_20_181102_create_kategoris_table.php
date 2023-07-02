@@ -15,10 +15,8 @@ return new class extends Migration
     {
         Schema::create('kategoris', function (Blueprint $table) {
             $table->id();
-            $table->string('jenis_bis');
-            $table->string('slug')->unique();
-            $table->text('deskripsi');
-            $table->decimal('harga')->nullable();
+            $table->string('nama_menu');
+            $table->decimal('harga');
             $table->binary('image')->nullable();
             $table->timestamps();
         });
